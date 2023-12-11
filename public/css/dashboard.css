@@ -109,3 +109,90 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* resources/css/dashboard.css */
+
+/* resources/css/dashboard.css */
+
+.total-users {
+    width: 48%;
+    max-width: 400px; /* Sesuaikan nilai max-width sesuai kebutuhan */
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+}
+
+.total-users h3 {
+    margin-bottom: 10px;
+}
+
+table {
+    width: 100%;
+    max-width: 100%; /* Agar tabel tetap responsif */
+    border-collapse: collapse;
+    margin-top: 10px;
+    background-color: #fff;
+}
+
+table th, table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+    background-color: #fff;
+}
+
+table th {
+    background-color: #f4f4f4;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+
+
+/* resources/css/dashboard.css */
+
+.main-content {
+    display: flex;
+}
+
+.total-users,
+.new-table {
+    width: 48%;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 10px; /* Menambahkan margin agar terjaga jarak antar elemen */
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+}
+
+.total-users h3,
+.new-table h3 {
+    margin-bottom: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background-color: #fff;
+}
+
+table th, table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+    background-color: #fff;
+}
+
+table th {
+    background-color: #f4f4f4;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
