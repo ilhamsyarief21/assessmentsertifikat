@@ -5,6 +5,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ForgotPasswordController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\CustomAuthController;
 
 
 
@@ -20,5 +21,16 @@ Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('aut
 
 Route::get('/users/create', [UserController::class, 'create'])->name('users.create');
 Route::post('/users', [UserController::class, 'store'])->name('users.store');
+
+
+Route::get('/user/login', [CustomAuthController::class, 'showUserLoginForm'])->name('user.login');
+Route::post('/user/login', [CustomAuthController::class, 'userLogin']);
+
+Route::get('/signupuser', [CustomAuthController::class, 'showSignupUserForm'])->name('user.signupuser');
+Route::post('/signupuser', [CustomAuthController::class, 'signupUser']);
+
+Route::get('/loginuser', function () {
+    return view('auth.loginuser');
+});
 
 
