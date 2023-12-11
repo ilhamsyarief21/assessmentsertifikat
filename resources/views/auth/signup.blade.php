@@ -26,7 +26,11 @@
             
             <label for="name">Nama:</label>
             <input type="text" name="name" id="name" required>
-            
+
+            <label for="age">Umur:</label>
+            <input type="text" name="age" id="age" required>
+
+                        
             <label for="email">Email:</label>
             <input type="email" name="email" id="email" required>
 

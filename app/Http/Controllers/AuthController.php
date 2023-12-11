@@ -39,6 +39,7 @@ class AuthController extends Controller
         $request->validate([
             'name' => 'required|string|max:255',
             'username' => 'required|string|max:255|unique:users',
+            'age' => 'required|numeric',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:8',
         ]);
@@ -49,6 +50,7 @@ class AuthController extends Controller
         User::create([
             'name' => $name,
             'username' => $request->username,
+            'age' => $request->input('age'),
             'email' => $request->email,
             'password' => Hash::make($request->password),
         ]);
@@ -61,7 +63,6 @@ class AuthController extends Controller
     {
         Auth::logout();
 
-        return redirect('/');
+        return redirect('/login');
     }
-    
 }

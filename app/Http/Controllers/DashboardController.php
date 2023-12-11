@@ -15,5 +15,7 @@ class DashboardController extends Controller
         $users = User::all(); // Mengambil semua data users
 
         return view('auth.dashboard', compact('totalUsers', 'users'));
+        return view('your.view', ['users' => $users]);
     }
+    
 }

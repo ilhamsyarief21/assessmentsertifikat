@@ -29,6 +29,9 @@
 
             <label for="email">Email:</label>
             <input type="email" name="email" id="email" value="{{ old('email') }}" required>
+            
+            <label for="age">Umur:</label>
+            <input type="text" name="age" id="age" value="{{ old('age') }}" required>
 
             <label for="username">Username:</label>
             <input type="text" name="username" id="username" value="{{ old('username') }}" required>

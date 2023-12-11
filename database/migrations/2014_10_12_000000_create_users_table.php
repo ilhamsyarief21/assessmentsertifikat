@@ -15,6 +15,7 @@ return new class extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('name')->default('Anonymous');
+            $table->integer('age')->nullable();
             $table->string('username')->unique(); // Tambahkan kolom username
             $table->string('email')->unique();
             $table->string('password');
