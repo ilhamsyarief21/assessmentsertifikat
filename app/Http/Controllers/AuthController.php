@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Support\Facades\Hash;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -18,6 +19,7 @@ class AuthController extends Controller
         $credentials = $request->validate([
             'email' => 'required|email',
             'password' => 'required',
+            
         ]);
 
         if (Auth::attempt($credentials)) {
@@ -34,23 +36,25 @@ class AuthController extends Controller
 
     public function signup(Request $request)
     {
-        // Validasi input
         $request->validate([
-            'email' => 'required|email|unique:users,email',
-            'password' => 'required|min:6',
+            'name' => 'required|string|max:255',
+            'username' => 'required|string|max:255|unique:users',
+            'email' => 'required|string|email|max:255|unique:users',
+            'password' => 'required|string|min:8',
         ]);
 
-        // Membuat pengguna baru
-        $user = User::create([
-            'email' => $request->input('email'),
-            'password' => bcrypt($request->input('password')),
+        // Memastikan memberikan nilai 'name' pada setiap penyisipan
+        $name = $request->input('name', 'Anonymous');
+
+        User::create([
+            'name' => $name,
+            'username' => $request->username,
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
         ]);
 
-        // Autentikasi pengguna setelah signup
-        Auth::login($user);
-
-        // Redirect ke dashboard atau halaman lain
-        return redirect()->route('dashboard');
+        // Redirect atau melakukan tindakan lain setelah pendaftaran
+        return redirect()->route('login')->with('success', 'Pendaftaran berhasil!');
     }
 
     public function logout()

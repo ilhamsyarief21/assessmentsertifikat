@@ -40,17 +40,27 @@
                 @endif
             </div>
             <div class="new-table">
-                <h3>New Table</h3>
+                <div class="table-header">
+                    <h3>New Table</h3>
+                    <button class="add-button">Tambah</button>
+                </div>
                 <table>
                     <thead>
                         <tr>
-                            <th>Column 1</th>
-                            <th>Column 2</th>
+                            <th>Name</th>
+                            <th>Age</th>
+                            <th>Nickname</th>
+                            <th>Employee</th>
                             <!-- Add more columns as needed -->
                         </tr>
                     </thead>
                     <tbody>
-                        <!-- Add rows as needed -->
+                        <tr>
+                            <td>Data 1</td>
+                            <td>Data 2</td>
+                            <td>Data 3</td>
+                            <td>Data 4</td>
+                        </tr>
                     </tbody>
                 </table>
             </div>

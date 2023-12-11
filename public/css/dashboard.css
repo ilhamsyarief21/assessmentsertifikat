@@ -96,6 +96,12 @@ body {
     margin-left: 20px;
     font-weight: bold;
 }
+.username {
+    margin-left: auto; /* Menggeser nama pengguna ke ujung kanan */
+    margin-right: 10px; /* Memberi sedikit margin kanan */
+    color: white; /* Memberi warna pada nama pengguna */
+
+}
 
 /* Content Container Styles */
 .content-container {
@@ -160,17 +166,19 @@ table tr:nth-child(even) {
 }
 
 .total-users,
+/* resources/css/dashboard.css */
+
 .new-table {
     width: 48%;
     border: 1px solid #ccc;
     padding: 20px;
-    margin: 10px; /* Menambahkan margin agar terjaga jarak antar elemen */
+    margin: 10px;
     display: flex;
     flex-direction: column;
     background-color: #fff;
+    flex-grow: 1; /* Menambahkan flex-grow untuk melebarkan ke kanan */
 }
 
-.total-users h3,
 .new-table h3 {
     margin-bottom: 10px;
 }
@@ -196,3 +204,12 @@ table th {
 table tr:nth-child(even) {
     background-color: #f9f9f9;
 }
+
+.add-button {
+    padding: 10px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
