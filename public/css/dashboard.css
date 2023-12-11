@@ -99,6 +99,7 @@ body {
 .username {
     margin-left: auto; /* Menggeser nama pengguna ke ujung kanan */
     margin-right: 10px; /* Memberi sedikit margin kanan */
+
     color: white; /* Memberi warna pada nama pengguna */
 
 }
@@ -180,13 +181,13 @@ table tr:nth-child(even) {
 }
 
 .new-table h3 {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 10px;
+    margin-top: 20px;
     background-color: #fff;
 }
 
@@ -211,5 +212,6 @@ table tr:nth-child(even) {
     color: #fff;
     border: none;
     cursor: pointer;
+    margin-bottom: 120px; /* Tambahkan jarak di bawah tombol */
 }
 

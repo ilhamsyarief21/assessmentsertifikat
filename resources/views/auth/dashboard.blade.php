@@ -42,7 +42,8 @@
             <div class="new-table">
                 <div class="table-header">
                     <h3>New Table</h3>
-                    <button class="add-button">Tambah</button>
+                    
+                    <a href="{{ route('users.create') }}" class="add-button">Tambah</a>
                 </div>
                 <table>
                     <thead>
@@ -55,13 +56,12 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>Data 1</td>
-                            <td>Data 2</td>
-                            <td>Data 3</td>
-                            <td>Data 4</td>
-                        </tr>
-                    </tbody>
+                        @foreach ($users as $user)
+                            <tr>
+                                <td>{{ $user->name }}</td>
+                                <!-- Add more columns as needed -->
+                            </tr>
+                        @endforeach
                 </table>
             </div>
         </div>
